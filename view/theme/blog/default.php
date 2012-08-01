@@ -18,12 +18,24 @@
                         )));
             }
         ?>
-        <aside><?php if(x($page,'aside')) echo $page['aside']; ?></aside>
-        <section><?php if(x($page,'content')) echo $page['content']; ?>
-            <div id="page-footer"></div>
-        </section>
-        <right_aside><?php if(x($page,'right_aside')) echo $page['right_aside']; ?></right_aside>
-        <footer><?php if(x($page,'footer')) echo $page['footer']; ?></footer>
+        
+        <div id="main">
+            <div id="primary">
+                <div id="content" role="main">
+                    <?php if(x($page,'content')) echo $page['content']; ?>
+                </div>
+            </div>
+            <div id="secondary" class="widget-area" role="complementary">
+                <?php if(x($page,'aside')) echo $page['aside']; ?>
+                <?php if(x($page,'right_aside')) echo $page['right_aside']; ?>
+            </div>
+        </div>
+        <footer id="colophon" role="contentinfo">
+            <div id="site-generator">
+                <a rel="generator" title="Personal Communication Platform" href="http://www.friendica.com/">Proudly powered by Friendica</a>
+                <?php if(x($page,'footer')) echo $page['footer']; ?>
+            </div>                        
+        </footer>
     </div>
 </body>
 </html>
