@@ -96,6 +96,7 @@ input#searchsubmit {
     left: 100%;
     top: 0;
 }
+#tools ul ul .empty,
 #tools ul ul a {
     background: none repeat scroll 0 0 #F9F9F9;
     border-bottom: 1px dotted #DDDDDD;
@@ -107,6 +108,22 @@ input#searchsubmit {
     padding: 10px;
     width: 168px;
 }
+#tools ul ul .empty { color: #888888; text-align: center;}
+#tools ul ul #nav-notifications-see-all  a,
+#tools ul ul #nav-notifications-mark-all  a{
+	font-size: 10px; 
+	background-color: #222222; 
+	color: #eeeeee;
+	line-height: 1em;
+}
+#tools ul ul #nav-notifications-mark-all  a {
+	border-bottom: 1px solid #444444;
+}
+#tools ul ul #nav-notifications-see-all  a:hover,
+#tools ul ul #nav-notifications-mark-all  a:hover {
+	background-color: #eeeeee; color: #222222;
+}
+
 #tools li:hover > a, #access ul ul *:hover > a, #access a:focus {
     background: none repeat scroll 0 0 #EFEFEF;
 }
