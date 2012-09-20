@@ -19,7 +19,7 @@
                     </div><!-- .entry-meta -->
 			
                     <div class="comments-link">
-                        <a title="Comment" href="$item.plink.href">$item.num_comments</a>
+                        <a title="Comment" href="$item.plink.href">$item.total_comments_num</a>
                     </div>
             </header><!-- .entry-header -->
 
@@ -31,8 +31,8 @@
                     {{ if $item.categories }}
                     <span class="cat-links">
                         <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> 
-                        <a rel="category" href="$cat.remove"{{ for $item.categories as $cat }}
-                            $cat
+                        {{ for $item.categories as $cat }}
+                            <a href="$cat.url">$cat.name</a>{{if $cat.removeurl}} (<a href="$cat.removeurl" title="$remove">x</a>) {{endif}} 
                         {{ endfor }}
                     </span>
                     <span class="sep"> | </span>
@@ -56,7 +56,9 @@
                     <span class="sep"> | </span>
                     {{ endif  }}
                     
-                    <span class="comments-link"><a title="Comment" href="$item.plink.href">$item.num_comments</a></span>
+                    <span class="comments-link"><a title="Comment" href="$item.plink.href">
+                        $item.total_comments_num $item.total_comments_text</a>
+                    </span>
 			
             </footer><!-- #entry-meta -->
 </article>
