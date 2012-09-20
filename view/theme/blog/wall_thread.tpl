@@ -9,12 +9,12 @@
                         </a>
                         <span class="by-author"> 
                             <span class="sep"> by </span>
-                            <span class="author vcard">
-                                <a rel="author-menu-$item.id" title="View all posts by $item.name" href="#" class="url fn n">$item.name</a>
+                            <span class="author vcard dropmenu">
+                                <a rel="author" title="$item.linktitle" href="$item.profile_url" class="url fn n">$item.name</a>
+                                <ul class="menu-popup" id="author-menu-$item.id">
+                                    $item.item_photo_menu
+                                </ul>                                  
                             </span>
-                            <ul class="contact-menu menu-popup" id="author-menu-$item.id">
-                                $item.item_photo_menu
-                            </ul>                            
                          </span>
                     </div><!-- .entry-meta -->
 			

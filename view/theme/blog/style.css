@@ -22,9 +22,15 @@ input#searchsubmit {
     margin: 0;
 }
 #branding #search {
-    -moz-transition-duration: 400ms;
-    -moz-transition-property: width, background;
-    -moz-transition-timing-function: ease;
+    -webkit-transition-duration: 400ms;
+	-webkit-transition-property: width, background;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-duration: 400ms;
+	-moz-transition-property: width, background;
+	-moz-transition-timing-function: ease;
+	-o-transition-duration: 400ms;
+	-o-transition-property: width, background;
+	-o-transition-timing-function: ease;
     float: right;
     width: 72px;
 }
@@ -47,9 +53,14 @@ input#searchsubmit {
 
 /* user bar */
 #tools {
-	background:  repeat scroll 0 0 #222222;
-	background: -moz-linear-gradient(#444444, #222222);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	background: #222; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#252525, #0a0a0a);
+	background: -o-linear-gradient(#252525, #0a0a0a);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#252525, #0a0a0a);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
     clear: both;
     display: block;
     position: fixed;
@@ -79,7 +90,9 @@ input#searchsubmit {
     text-decoration: none;
 }
 #tools ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
     display: none;
     float: left;
     left: 0;
@@ -98,7 +111,7 @@ input#searchsubmit {
 }
 #tools ul ul .empty,
 #tools ul ul a {
-    background: none repeat scroll 0 0 #F9F9F9;
+    background: #F9F9F9;
     border-bottom: 1px dotted #DDDDDD;
     color: #444444;
     font-size: 13px;
@@ -125,12 +138,15 @@ input#searchsubmit {
 }
 
 #tools li:hover > a, #access ul ul *:hover > a, #access a:focus {
-    background: none repeat scroll 0 0 #EFEFEF;
+    background: #EFEFEF;
 }
 #tools li:hover > a, #access a:focus {
-	background: none repeat scroll 0 0 #EFEFEF;
-    background: -moz-linear-gradient(#F9F9F9, #E5E5E5);
-    color: #373737;
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;
 }
 #tools ul li:hover > ul {
     display: block;
@@ -141,9 +157,64 @@ input#searchsubmit {
     margin-right: 5px;
 }
 
+#tools .selected > a,
+#access .selected > a{
+	font-weight: bold;
+}
+/* dropdown icon */
 .dropmenu { background: url(images/dropdown.png) center right no-repeat; margin-right: 1em;  }
+#main .dropmenu { background: url(images/dropdown_dark.png) center right no-repeat; padding-right: 15px; }
+
+/* popup menu (author link) */
+#main .dropmenu:hover { background-color: #f9f9f9; }
+#main .dropmenu:hover > ul.menu-popup { display: block; }
+span.author.vcard { position: relative; }
+ul.menu-popup {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+    display: none;
+    position: absolute;
+    width: 12em;
+    z-index: 99999;	
+    font-size: 10px;
+    list-style: none outside none;
+    margin: 0 0 0 -0.8125em;
+    padding-left: 0;
+	left: 0;
+	top:1.2em;
+}
+ul.menu-popup:hover { display: block; }
+
+ul.menu-popup li {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+ul.menu-popup a {
+    background: #F9F9F9;
+    border-bottom: 1px dotted #DDDDDD;
+    color: #444444;
+    font-weight: normal;
+    height: auto;
+    line-height: 1em;
+    padding: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+ul.menu-popup a:hover {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;	
+}
 
 
+/* main layout */
 #main { clear: both; padding: 1.625em 0 0; }
 
 #main #primary { float: left; margin: 0 -26.4% 0 0; width: 100%; }
