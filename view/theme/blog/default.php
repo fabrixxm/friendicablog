@@ -5,7 +5,10 @@
   <script>var baseurl="<?php echo $a->get_baseurl() ?>";</script>
   <?php if(x($page,'htmlhead')) echo $page['htmlhead'] ?>
 </head>
-<body>
+<?php $bodyclass="";
+if (!x($page,'aside') && !x($page,'right_aside')) $bodyclass.=" singular";
+?>
+<body class="<?php echo $bodyclass;?>">
     <div id="page">
         <?php 
             if(x($page,'nav')){
@@ -25,10 +28,12 @@
                     <?php if(x($page,'content')) echo $page['content']; ?>
                 </div>
             </div>
-            <div id="secondary" class="widget-area" role="complementary">
+            <?php if (x($page,'aside') || x($page,'right_aside')) { ?>
+            <div id="secondary" class="widget-area <?php if (in_array($a->module, array('profile','photos'))) echo 'overlap'; ?>" role="complementary">
                 <?php if(x($page,'aside')) echo $page['aside']; ?>
                 <?php if(x($page,'right_aside')) echo $page['right_aside']; ?>
             </div>
+            <?php }?>
         </div>
         <footer id="colophon" role="contentinfo">
             <div id="site-generator">

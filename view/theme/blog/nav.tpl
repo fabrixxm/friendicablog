@@ -20,8 +20,7 @@
         <div class="menu">
             <ul>
                 {{ if $nav.home }}
-                    <li class="$sel.home"><a id="nav-home-link" class="nav-commlink $nav.home.2" href="$nav.home.0" title="$nav.home.3" >$nav.home.1</a></li>
-                    <span id="home-update" class="nav-ajax-left"></span>
+                    <li class="$sel.home"><a id="nav-home-link" class="nav-commlink $nav.home.2" href="$nav.home.0" title="$nav.home.3" >$nav.home.1 <span id="home-update" class="nav-ajax-left"></span></a></li>
                 {{ endif }}
 
                 {{ if $nav.community }}<li class="$sel.community"><a id="nav-community-link" class="nav-commlink $nav.community.2 " href="$nav.community.0" title="$nav.community.3" >$nav.community.1</a></li>{{ endif }}
@@ -54,6 +53,8 @@
                             
                             {{ if $nav.contacts }}<li><a class="$nav.contacts.2" href="$nav.contacts.0" title="$nav.contacts.3" >$nav.contacts.1</a></li>{{ endif }}	
 
+                            {{ if $nav.profiles }}<li><a class="$nav.profiles.2" href="$nav.profiles.0" title="$nav.profiles.3" >$nav.profiles.1</a></li>{{ endif }}	
+
                             {{ if $nav.manage }}<li><a class="$nav.manage.2 sep" href="$nav.manage.0" title="$nav.manage.3">$nav.manage.1</a></li>{{ endif }}				
                             
                             {{ if $nav.settings }}<li><a class="$nav.settings.2 sep" href="$nav.settings.0" title="$nav.settings.3">$nav.settings.1</a></li>{{ endif }}
@@ -66,15 +67,13 @@
                 
                     {{ if $nav.network }}
                     <li class="$sel.network">
-                        <a class="$nav.network.2" href="$nav.network.0" title="$nav.network.3" >$nav.network.1</a>
-                        <span id="net-update" class="nav-notify"></span>
+                        <a class="$nav.network.2" href="$nav.network.0" title="$nav.network.3" >$nav.network.1 <span id="net-update" class="nav-notify"></span></a>
                     </li>
                     {{ endif }}
                 
                 {{ if $nav.notifications }}
                     <li class="$sel.notifications dropmenu">
-                        <a id="nav-notifications-linkmenu" class="nav-commlink" href="$nav.notifications.0" rel="#nav-notifications-menu" title="$nav.notifications.1">$nav.notifications.1</a>
-                        <span id="notify-update" class="nav-ajax-left"></span>
+                        <a id="nav-notifications-linkmenu" class="nav-commlink" href="$nav.notifications.0" rel="#nav-notifications-menu" title="$nav.notifications.1">$nav.notifications.1 <span id="notify-update" class="nav-ajax-left"></span></a>
                         <ul id="nav-notifications-menu" class="menu-popup">
                             <li id="nav-notifications-see-all"><a href="$nav.notifications.all.0">$nav.notifications.all.1</a></li>
                             <li id="nav-notifications-mark-all"><a href="#" onclick="notifyMarkAll(); return false;">$nav.notifications.mark.1</a></li>
@@ -85,15 +84,13 @@
                 
                 {{ if $nav.introductions }}
                     <li class="$sel.introductions">
-                        <a id="nav-notify-link" class="nav-commlink $nav.introductions.2" href="$nav.introductions.0" title="$nav.introductions.3" >$nav.introductions.1</a>
-                        <span id="intro-update" class="nav-ajax-left"></span>
+                        <a id="nav-notify-link" class="nav-commlink $nav.introductions.2" href="$nav.introductions.0" title="$nav.introductions.3" >$nav.introductions.1 <span id="intro-update" class="nav-ajax-left"></span></a>
                     </li>
                 {{ endif }}
 	
                 {{ if $nav.messages }}
                     <li class="$sel.messages">
-                        <a id="nav-messages-link" class="nav-commlink $nav.messages.2" href="$nav.messages.0" title="$nav.messages.3" >$nav.messages.1</a>
-                        <span id="mail-update" class="nav-ajax-left"></span>
+                        <a id="nav-messages-link" class="nav-commlink $nav.messages.2" href="$nav.messages.0" title="$nav.messages.3" >$nav.messages.1 <span id="mail-update" class="nav-ajax-left"></span></a>
                     </li>
                 {{ endif }}
             </ul>		

@@ -1,12 +1,11 @@
 <aside class="vcard">
+	
+	<div id="profile-photo-wrapper"><img class="photo" src="$profile.photo?rev=$profile.picdate" alt="$profile.name"></div>
+
 
 	<h2 class="fn label">$profile.name</h2>
-	
-				
-	
-	{{ if $pdesc }}<div class="title">$profile.pdesc</div>{{ endif }}
-	<div id="profile-photo-wrapper"><img class="photo" width="175" height="175" src="$profile.photo?rev=$profile.picdate" alt="$profile.name"></div>
 
+	{{ if $pdesc }}<div class="title">$profile.pdesc</div>{{ endif }}
 
 
 	{{ if $location }}
@@ -36,10 +35,10 @@
 	<div id="profile-extra-links">
 		<ul>
 			{{ if $connect }}
-				<li><a id="dfrn-request-link" href="dfrn_request/$profile.nickname">$connect</a></li>
+				<li><a id="dfrn-request-link" href="dfrn_request/$profile.nickname" class="button">$connect</a></li>
 			{{ endif }}
 			{{ if $wallmessage }}
-				<li><a id="wallmessage-link" href="wallmessage/$profile.nickname">$wallmessage</a></li>
+				<li><a id="wallmessage-link" href="wallmessage/$profile.nickname" class="button">$wallmessage</a></li>
 			{{ endif }}
 		</ul>
 	</div>
