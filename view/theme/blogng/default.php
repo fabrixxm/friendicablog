@@ -32,6 +32,7 @@
 
 	<body>
 		<?php if (x($page, 'nav')) echo $page['nav']; ?>
+		<div class="row"><br></div>
 		<div class="row">
 			<div class="nine columns">
 				<?php if (x($page, 'content')) echo $page['content']; ?>
