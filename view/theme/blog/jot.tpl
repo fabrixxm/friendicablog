@@ -55,6 +55,9 @@
         <div id="profile-jot-email-label">$emailcc</div><input type="text" name="emailcc" id="profile-jot-email" title="$emtitle" />
         <div id="profile-jot-email-end"></div>
         $jotnets
+        <div class="buttonbar" >
+            <a href="#" class="button" onclick="$.fancybox.close(); return false;">Ok</a>
+        </div>
     </div>
 </div>
 

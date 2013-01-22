@@ -1,6 +1,8 @@
 @import url('twentyeleven_style.css');
+@import url('acl.css');
 
 /* varie */
+button, input[type="submit"],input[type="button"],
 input.button,
 a.button {
 	border: 0px;
@@ -10,11 +12,19 @@ a.button {
     -moz-border-radius: 2px 2px 2px 2px;
 	border-radius: 2px 2px 2px 2px;
 }
+button:hover, input[type="submit"]:hover,input[type="button"]:hover,
 input.button:hover,
 a.button:hover {
 	 background-color: #5fabe5;
 }
 
+.buttonbar {
+	clear: both;
+	margin: 5px 0px;
+	padding: 10px;
+	text-align: right;
+	background: #eee;
+}
 
 /* header */
 input#search {
@@ -312,6 +322,21 @@ h2.fn { font-weight: bold; font-size: 1.2em;}
 #profile-extra-links ul li { margin: 0px; padding: 0.5em 0px;}
 #profile-extra-links ul li  a { display: block; }
 
+/* this is the same of .widget-title , but I can't add the class to html... */
+.widget h3 {
+	color: #666666;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+.tool .selected { background-color: #1982D1; color: #ffffff;
+ 	padding: 2px 4px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
 
 /* contact block */
 .contact-block-h4 { float: left; }
@@ -359,4 +384,68 @@ ul.tabs li a.active { background-color: #1982D1; color: #ffffff; }
 .icon.unlock	{ background: url(icons/unlocked.png) transparent center center no-repeat; }
 
 
+/* content */
+.info-message {
+	background-color: #E9E9E9;
+	color: #505050;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.298);
+	padding: 2em; margin-bottom: 1em;
+	-webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+
+/* fields */
+.field { margin-bottom: 0.8em;}
+.field label { display: inline-block; width: 59%; }
+.field.radio label, .field.checkbox label , .field.yesno label { width: 70% }
+.field input, .field select{ display: inline-block; width: 39%; }
+.field input[type="checkbox"], .field input[type="radio"] { width: auto; }
+.field .field_help { display: block; margin-left: 10%; color: #666666; }
+/* field onoff (from duepuntozero) */
+.field .onoff {width: 80px; float: right;}
+.field .onoff a {
+	display: block;
+	border:1px solid #666666;
+	background-image:url("../../../images/onoff.jpg");
+	background-repeat: no-repeat;
+	padding: 4px 2px 2px 2px;
+	height: 16px;
+	text-decoration: none;
+}
+.field .onoff .off {
+	border-color:#666666;
+	padding-left: 40px;
+	background-position: left center;
+	background-color: #cccccc;
+	color: #666666;
+	text-align: right;
+}
+.field .onoff .on {
+	border-color:#204A87;
+	padding-right: 40px;
+	background-position: right center;
+	background-color: #D7E3F1;
+	color: #204A87;
+	text-align: left;
+}
+.hidden { display: none!important; }
+
+/* oauth settings */
+.oauthapp { margin-top: 30px; height: auto; overflow: auto; }
+.oauthapp img { float: left; margin-right: 10px; }
+
+/* pluginlist */
+#pluginslist { list-style: none outside none; margin: 0px; padding: 0px; }
+#pluginslist  .desc { color: #666666; margin: 0px 0px 1.3em 20px;}
+.icon.on { border: 1px solid #cccccc; background-color: #56ef46;
+	-webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+	border-radius: 16px 16px 16px 16px;
+}
+.icon.off { border: 1px solid #cccccc; background-color: #ef4646;
+	-webkit-border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+	border-radius: 16px 16px 16px 16px;
+}
 
