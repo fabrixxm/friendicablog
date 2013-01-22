@@ -26,6 +26,8 @@ a.button:hover {
 	background: #eee;
 }
 
+footer { margin-top: 20px; } /*?*/
+
 /* header */
 input#search {
     background: url("images/search.png") no-repeat scroll 5px 6px transparent;

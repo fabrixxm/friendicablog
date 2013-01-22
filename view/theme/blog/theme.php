@@ -12,3 +12,7 @@ $a->theme_info = array(
 function blog_init(&$a) {
 
 }
+
+function blogtemplate($item) {
+    return $item['template'];
+}

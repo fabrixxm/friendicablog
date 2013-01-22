@@ -37,7 +37,7 @@
         <dl class="toolbox right">
             <dd  style="{{if $visitor=none}}display: none;{{endif}}"><img id="profile-rotator" src="$baseurl/view/theme/blog/images/rotator.gif" alt="$wait" title="$wait" style="display: none;" /></dd>
             <dd><input type="submit" id="profile-jot-submit" name="submit" value="$share" class="button" /></dd>
-            <dd><a href="#" onclick="preview_post(); return false;" id="jot-preview-link" class="button">$preview</a></dd>
+            {{ if $preview }}<dd><a href="#" onclick="preview_post(); return false;" id="jot-preview-link" class="button">$preview</a></dd>{{ endif }}
         </dl>
 
 

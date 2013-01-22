@@ -5,8 +5,9 @@
   <script>var baseurl="<?php echo $a->get_baseurl() ?>";</script>
   <?php if(x($page,'htmlhead')) echo $page['htmlhead'] ?>
 </head>
-<?php $bodyclass="";
-if (!x($page,'aside') && !x($page,'right_aside')) $bodyclass.=" singular";
+<?php 
+    $bodyclass="";
+    if (!x($page,'aside') && !x($page,'right_aside')) $bodyclass.=" singular";
 ?>
 <body class="<?php echo $bodyclass;?>">
     <div id="page">
@@ -29,7 +30,7 @@ if (!x($page,'aside') && !x($page,'right_aside')) $bodyclass.=" singular";
                 </div>
             </div>
             <?php if (x($page,'aside') || x($page,'right_aside')) { ?>
-            <div id="secondary" class="widget-area <?php if (in_array($a->module, array('profile','photos'))) echo 'overlap'; ?>" role="complementary">
+            <div id="secondary" class="widget-area <?php if (in_array($a->module, array('profile','photos','display'))) echo 'overlap'; ?>" role="complementary">
                 <?php if(x($page,'aside')) echo $page['aside']; ?>
                 <?php if(x($page,'right_aside')) echo $page['right_aside']; ?>
             </div>
