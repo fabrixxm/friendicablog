@@ -2,6 +2,21 @@
 	
 	<div id="profile-photo-wrapper"><img class="photo" src="$profile.photo?rev=$profile.picdate" alt="$profile.name"></div>
 
+     {{ if $profile.edit }}
+        <div class="dropmenu" style="position: relative">
+                <a href="$profile.edit.0" title="$profile.edit.3">$profile.edit.1</a>
+                <ul id="profiles-menu" class="menu-popup">
+                    {{ for $profile.menu.entries as $e }}
+                    <li>
+                        <a href="profiles/$e.id"><img src='$e.photo'>$e.profile_name</a>
+                    </li>
+                    {{ endfor }}
+                    <li><a href="$profile.edit.0">$profile.edit.3</a></li>
+                    <li><a href="profile_photo" >$profile.menu.chg_photo</a></li>
+                    {{ if $profile.menu.cr_new}}<li><a href="profiles/new" >$profile.menu.cr_new</a></li>{{ endif }}
+                </ul>
+        </div>
+      {{ endif }}   
 
 	<h2 class="fn label">$profile.name</h2>
 
@@ -29,6 +44,7 @@
 	{{ if $marital }}<dl class="marital"><dt class="marital-label"><span class="heart">&hearts;</span>$marital</dt><dd class="marital-text">$profile.marital</dd></dl>{{ endif }}
 
 	{{ if $homepage }}<dl class="homepage"><dt class="homepage-label">$homepage</dt><dd class="homepage-url"><a href="$profile.homepage" target="external-link">$profile.homepage</a></dd></dl>{{ endif }}
+   
 
 	{{ inc diaspora_vcard.tpl }}{{ endinc }}
 	

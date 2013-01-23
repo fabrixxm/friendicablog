@@ -21,7 +21,7 @@
             {{ endif }}
             <div id="jot-text-wrap">
             <img id="profile-jot-text-loading" src="images/rotator.gif" alt="$wait" title="$wait" style="display: none;" />
-            <textarea rows="5" cols="64" class="profile-jot-text" id="profile-jot-text" name="body" >{{ if $content }}$content{{ else }}$share{{ endif }}</textarea>
+            <textarea rows="5" cols="64" class="profile-jot-text" id="profile-jot-text" name="body" >{{ if $content }}$content{{ endif }}</textarea>
             </div>
 
         <dl class="toolbox">

@@ -306,7 +306,7 @@ body {
 	top: 2.2em;
 	left: 2.2em;
 }
-.one-column #respond {
+.one-column .respond {
 	width: auto;
 }
 
@@ -2048,12 +2048,12 @@ a.comment-reply-link > span {
 	width: auto;
 }
 /* And a full-width comment form */
-.page-template-sidebar-page-php #respond {
+.page-template-sidebar-page-php .respond {
 	width: auto;
 }
 
 /* Comment Form */
-#respond {
+.respond {
 	background: #ddd;
 	border: 1px solid #d3d3d3;
 	-moz-border-radius: 3px;
@@ -2063,8 +2063,8 @@ a.comment-reply-link > span {
 	position: relative;
 	width: 68.9%;
 }
-#respond input[type="text"],
-#respond textarea {
+.respond input[type="text"],
+.respond textarea {
 	background: #fff;
 	border: 4px solid #eee;
 	-moz-border-radius: 5px;
@@ -2076,16 +2076,16 @@ a.comment-reply-link > span {
 	padding: 10px;
 	text-indent: 80px;
 }
-#respond .comment-form-author,
-#respond .comment-form-email,
-#respond .comment-form-url,
-#respond .comment-form-comment {
+.respond .comment-form-author,
+.respond .comment-form-email,
+.respond .comment-form-url,
+.respond .comment-form-comment {
 	position: relative;
 }
-#respond .comment-form-author label,
-#respond .comment-form-email label,
-#respond .comment-form-url label,
-#respond .comment-form-comment label {
+.respond .comment-form-author label,
+.respond .comment-form-email label,
+.respond .comment-form-url label,
+.respond .comment-form-comment label {
 	background: #eee;
 	-webkit-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
 	-moz-box-shadow: 1px 2px 2px rgba(204,204,204,0.8);
@@ -2100,17 +2100,17 @@ a.comment-reply-link > span {
 	top: 40px;
 	z-index: 1;
 }
-#respond input[type="text"]:focus,
-#respond textarea:focus {
+.respond input[type="text"]:focus,
+.respond textarea:focus {
 	text-indent: 0;
 	z-index: 1;
 }
-#respond textarea {
+.respond textarea {
 	resize: vertical;
 	width: 95%;
 }
-#respond .comment-form-author .required,
-#respond .comment-form-email .required {
+.respond .comment-form-author .required,
+.respond .comment-form-email .required {
 	color: #bd3500;
 	font-size: 22px;
 	font-weight: bold;
@@ -2119,18 +2119,18 @@ a.comment-reply-link > span {
 	top: 45px;
 	z-index: 1;
 }
-#respond .comment-notes,
-#respond .logged-in-as {
+.respond .comment-notes,
+.respond .logged-in-as {
 	font-size: 13px;
 }
-#respond p {
+.respond p {
 	margin: 10px 0;
 }
-#respond .form-submit {
+.respond .form-submit {
 	float: right;
 	margin: -20px 0 10px;
 }
-#respond input#submit {
+.respond input#submit {
 	background: #222;
 	border: none;
 	-moz-border-radius: 3px;
@@ -2147,20 +2147,20 @@ a.comment-reply-link > span {
 	left: 30px;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
 }
-#respond input#submit:active {
+.respond input#submit:active {
 	background: #1982d1;
 	color: #bfddf3;
 }
-#respond #cancel-comment-reply-link {
+.respond #cancel-comment-reply-link {
 	color: #666;
 	margin-left: 10px;
 	text-decoration: none;
 }
-#respond .logged-in-as a:hover,
-#respond #cancel-comment-reply-link:hover {
+.respond .logged-in-as a:hover,
+.respond #cancel-comment-reply-link:hover {
 	text-decoration: underline;
 }
-.commentlist #respond {
+.commentlist .respond {
 	margin: 1.625em 0 0;
 	width: auto;
 }
@@ -2188,15 +2188,15 @@ a.comment-reply-link > span {
 #cancel-comment-reply-link:hover {
 	color: #ff4b33;
 }
-#respond label {
+.respond label {
 	line-height: 2.2em;
 }
-#respond input[type=text] {
+.respond input[type=text] {
 	display: block;
 	height: 24px;
 	width: 75%;
 }
-#respond p {
+.respond p {
 	font-size: 12px;
 }
 p.comment-form-comment {
@@ -2354,7 +2354,7 @@ p.comment-form-comment {
 		width: auto;
 	}
 	/* And a full-width comment form */
-	#respond {
+	.respond {
 		width: auto;
 	}
 	/* No need to float footer widgets at this size */
@@ -2456,11 +2456,11 @@ p.comment-form-comment {
 		top: 2.2em;
 	}
 	/* Use the available space in the smaller comment form */
-	#respond input[type="text"] {
+	.respond input[type="text"] {
 		width: 95%;
 	}
-	#respond .comment-form-author .required,
-	#respond .comment-form-email .required {
+	.respond .comment-form-author .required,
+	.respond .comment-form-email .required {
 		left: 95%;
 	}
 	#content .gallery-columns-3 .gallery-item {
@@ -2595,7 +2595,7 @@ p.comment-form-comment {
 		margin: 2.2em 0 0;
 		padding: 0;
 	}
-	#respond {
+	.respond {
 		display: none;
 	}
 	.widget-area {

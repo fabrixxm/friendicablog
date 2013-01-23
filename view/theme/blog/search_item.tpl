@@ -1,7 +1,6 @@
-<li class="comment even thread-even depth-$item.thread_level" id="li-comment-$item.id">
-      <article id="comment-$item.id" class="comment">
-        <footer class="comment-meta">
-          <div class="comment-author vcard">
+      <article id="search-$item.id" class="search">
+        <footer class="search-meta">
+          <div class="search-author vcard">
             <img class="avatar avatar-68 photo avatar-default " alt="" title="$item.name" src="$item.thumb"  height="68" width="68">
             <span class="fn dropmenu">
               <a href="$item.profile_url" rel="external nofollow" class="url" title="$item.linktitle">$item.name</a>
@@ -13,26 +12,16 @@
             <a href="$item.plink.href">
               <time datetime="$item.localtime">$item.ago</time>
             </a>
-            <span class="says">said:
-            {{ if $item.threaded }}
-            <a href="#respond-$item.id" class="reply-link">(reply)</a>
-            {{ endif }}
-            </span>
-            
           </div>
           <!-- .comment-author .vcard -->
         </footer>
-        <div class="comment-content">
+        {{ if $item.title }}
+        <header class="search-header">
+                    <h1><a rel="bookmark" title="Permalink" href="$item.plink.href">$item.title</a></h1>
+        </header>
+        {{ endif }}
+        <div class="search-content">
           <p>$item.body</p>
         </div>
-        <div class="reply">
-              {{ for $item.children as $child }}
-                {{ inc wall_thread_comment.tpl with $item=$child }}{{ endinc }}
-            {{ endfor }}
-
-        </div>
-        <!-- .reply -->
       </article>
-      <!-- #comment-## -->
-      $item.comment
-</li>
+
