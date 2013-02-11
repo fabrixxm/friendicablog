@@ -27,14 +27,19 @@
     </ul>
     {{ endif }}
 
+</div>
 
-    {{ if $admin.plugins_admin }}<h4>$plugadmtxt</h4>{{ endif }}
+{{ if $admin.plugins_admin }}
+<div class="widget">
+    <h3>$plugadmtxt</h3>
     <ul class='admin linklist'>
         {{ for $admin.plugins_admin as $l }}
         <li class='admin link button $l.2'><a href='$l.0'>$l.1</a></li>
         {{ endfor }}
     </ul>
 </div>
+{{ endif }}
+
 <div class="widget">        
     <h3>$logtxt</h3>
     <ul class='admin linklist'>

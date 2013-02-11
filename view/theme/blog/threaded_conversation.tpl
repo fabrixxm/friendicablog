@@ -23,7 +23,12 @@ $live_update
    
     $(document).ready(function(){
         // setup reply popup forms
-        $(".reply-link").fancybox();
+        $(".reply-link").colorbox({
+		href: function() {
+			return $(this).attr('href');
+		},
+		inline: true
+	});
     });
 </script>
 

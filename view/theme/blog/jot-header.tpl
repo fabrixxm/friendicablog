@@ -13,13 +13,17 @@ function initEditor(cb){
 			$("#profile-jot-text").css({ 'height': 200, 'color': '#000' });
 			$("#profile-jot-text").contact_autocomplete(baseurl+"/acl");
 			editor = true;
-			$("a#jot-perms-icon").fancybox({
-				transitionIn : 'elastic',
-				transitionOut : 'elastic',
-                afterClose : function() {
-                    $.fancybox("#profile-jot-wrapper");
-                }
-			});
+			$("a#jot-perms-icon").colorbox({
+			    href:$("a#jot-perms-icon").attr('href'),
+			    inline: true,
+			    onClosed : function() {
+				$.colorbox({
+					href:"#profile-jot-wrapper",
+					inline: true,
+					open: true
+				});
+			    }
+			}); 
 			$(".jothidden").show();
 			if (typeof cb!="undefined") cb();
 			return;
@@ -108,12 +112,16 @@ function initEditor(cb){
 		});
 		editor = true;
 		// setup acl popup
-		$("a#jot-perms-icon").fancybox({
-			transitionIn : 'elastic',
-			transitionOut : 'elastic',
-            afterClose : function() {
-                $.fancybox("#profile-jot-wrapper");
-            }
+		$("a#jot-perms-icon").colorbox({
+		    href:$("a#jot-perms-icon").attr('href'),
+		    inline: true,
+		    onClosed : function() {
+			$.colorbox({
+				href:"#profile-jot-wrapper",
+				inline: true,
+				open: true
+			});
+		    }
 		}); 
 	} else {
 		if (typeof cb!="undefined") cb();
@@ -133,10 +141,10 @@ function enableOnUser(){
 
 	$(document).ready(function() {
 	
-        $("a.showjot").fancybox({
-				transitionIn : 'elastic',
-				transitionOut : 'elastic',
-                beforeShow : function() {
+        $("a.showjot").colorbox({
+		href: $("a.showjot").attr('href'),
+		inline: true,
+                onOpen : function() {
                     enableOnUser();
                 }
         });
@@ -288,7 +296,7 @@ function enableOnUser(){
 		var bordercolor = $("input").css("border-color");
 		
 		$.get('filer/', function(data){
-			$.fancybox(data);
+			$.colorbox({html:data});
 			$("#id_term").keypress(function(){
 				$(this).css("border-color",bordercolor);
 			})
@@ -306,7 +314,7 @@ function enableOnUser(){
 //					if(timer) clearTimeout(timer);
 //					timer = setTimeout(NavUpdate,3000);
 					liking = 1;
-					$.fancybox.close();
+					$.colorbox.close();
 				} else {
 					$("#id_term").css("border-color","#FF0000");
 				}

@@ -90,7 +90,7 @@ $group_select
 		<div id="profile-jot-acl-wrapper" style="width:auto;height:auto;overflow:auto;">
 			$aclselect
                 <div class="buttonbar" >
-                    <a href="#" class="button" onclick="$.fancybox.close(); return false;">Ok</a>
+                    <a href="#" class="button" onclick="$.colorbox.close(); return false;">Ok</a>
                 </div>
 		</div>
 	</div>

@@ -56,7 +56,7 @@
         <div id="profile-jot-email-end"></div>
         $jotnets
         <div class="buttonbar" >
-            <a href="#" class="button" onclick="$.fancybox.close(); return false;">Ok</a>
+            <a href="#" class="button" onclick="$.colorbox.close(); return false;">Ok</a>
         </div>
     </div>
 </div>
