@@ -1,16 +1,16 @@
 <script>
 	$(function(){
 		
-		$("#cnftheme").fancybox({
-			width: 800,
-			autoDimensions: false,
-			onStart: function(){
+		$("#cnftheme").colorbox({
+			href: function(){
 				var theme = $("#id_theme :selected").val();
 				var theme_mobile = $("#id_theme_mobile :selected").val();
-				$("#cnftheme").attr('href',"$baseurl/admin/themes/"+theme);
-			}, 
+				return "$baseurl/admin/themes/"+theme;
+			},
+			width: "80%",
+			height: "100%",
 			onComplete: function(){
-				$("div#fancybox-content form").submit(function(e){
+				$("div#cboxLoadedContent form").submit(function(e){
 					var url = $(this).attr('action');
 					// can't get .serialize() to work...
 					var data={};
@@ -25,7 +25,7 @@
 					$.post(url, data, function(data) {
 						if(timer) clearTimeout(timer);
 						NavUpdate();
-						$.fancybox.close();
+						$.colorbox.close();
 					})
 					
 					return false;
@@ -39,7 +39,7 @@
 	<h1>$title - $page</h1>
 	
 	<form action="$baseurl/admin/site" method="post">
-    <input type='hidden' name='form_security_token' value='$form_security_token'>
+ 	<input type='hidden' name='form_security_token' value='$form_security_token'>
 
 	{{ inc field_input.tpl with $field=$sitename }}{{ endinc }}
 	{{ inc field_textarea.tpl with $field=$banner }}{{ endinc }}
