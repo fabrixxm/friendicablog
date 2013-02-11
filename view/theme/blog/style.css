@@ -274,7 +274,7 @@ ul.menu-popup a:hover {
 #secondary { float: right; margin-right: 7.6%; width: 18.8%;  position: relative;}
 #secondary.overlap { top: -200px; }
 #secondary.overlap.lower { top: -120px; }
-#content { margin: 0 34% 0 7.6%; width: 58.4%; }
+#content { margin: 0 34% 0 7.6%; width: 58.4%; position: relative; }
 
 /* Singular */
 .singular #primary {
@@ -364,11 +364,10 @@ ul.tabs li a:hover { background-color: #EEEEEE; }
 ul.tabs li a.active { background-color: #1982D1; color: #ffffff; }
 
 /* jot */
-/* non mi piace, ma vabè */
 .showjot {
-	position: relative;
-	top: -1.5em;
-	left: 550px;
+	position: absolute;
+	top: -7px;
+	right: 0px;
 }
 .toolbox { margin: 0px; text-align: left; }
 .toolbox.left { text-align: left;}
@@ -532,12 +531,12 @@ ul#profiles-menu li img { width: 16px; vertical-align: middle; margin-right: 10p
 .icon { display: inline-block; margin: 0px; padding: 0px; width: 16px; height: 16px; }
 .icon.camera	{ background: url(icons/image.png) transparent center center no-repeat; }
 .icon.attach 	{ background: url(icons/attachment.png) transparent center center no-repeat; }
-.icon.link		{ background: url(icons/link.png) transparent center center no-repeat; }
-.icon.video		{ background: url(icons/youtube2.png) transparent center center no-repeat; }
-.icon.audio		{ background: url(icons/headphones.png) transparent center center no-repeat; }
-.icon.globe		{ background: url(icons/location.png) transparent center center no-repeat; }
+.icon.link	{ background: url(icons/link.png) transparent center center no-repeat; }
+.icon.video	{ background: url(icons/youtube2.png) transparent center center no-repeat; }
+.icon.audio	{ background: url(icons/headphones.png) transparent center center no-repeat; }
+.icon.globe	{ background: url(icons/location.png) transparent center center no-repeat; }
 .icon.noglobe	{ background: url(icons/globe.png) transparent center center no-repeat; }
-.icon.lock		{ background: url(icons/lock2.png) transparent center center no-repeat; }
+.icon.lock	{ background: url(icons/lock2.png) transparent center center no-repeat; }
 .icon.unlock	{ background: url(icons/unlocked.png) transparent center center no-repeat; }
 .icon.edit	{ background: url(icons/pencil.png) transparent center center no-repeat; }
 

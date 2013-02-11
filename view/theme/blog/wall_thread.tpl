@@ -65,7 +65,7 @@
 
 <div id="comments">
   <h2 id="comments-title">
-        $item.total_comments_num $item.total_comments_text on &ldquo;<span>$item.title</span>&rdquo;	
+        $item.total_comments_num $item.total_comments_text {{if $item.title}}on &ldquo;<span>$item.title</span>&rdquo;{{endif}}	
   </h2>
   <ol class="commentlist">
     
