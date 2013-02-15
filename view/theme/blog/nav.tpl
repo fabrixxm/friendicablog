@@ -67,7 +67,7 @@
                 
                     {{ if $nav.network }}
                     <li class="$sel.network">
-                        <a class="$nav.network.2" href="$nav.network.0" title="$nav.network.3" >$nav.network.1 <span id="net-update" class="nav-notify"></span></a>
+                        <a class="$nav.network.2" href="$nav.network.0" title="$nav.network.3" >$nav.network.1 <span id="net-update" class="nav-ajax-left"></span></a>
                     </li>
                     {{ endif }}
                 
