@@ -1,6 +1,6 @@
 <article class="post-8 post type-post status-publish format-standard hentry category-uncategorized tag-html tag-wordpress {{if $mode == network}}compact{{endif}}" id="item-$item.id">
 		<header class="entry-header">
-                    <h1 class="entry-title"><a rel="bookmark" title="Permalink" href="$item.plink.href">$item.title</a></h1>
+                    {{ if $item.title }}<h1 class="entry-title"><a rel="bookmark" title="Permalink" href="$item.displaylink">$item.title</a></h1>{{ endif }}
 			
                     <div class="entry-meta">
 						{{if $mode != profile}}<img class="avatar avatar-68 photo avatar-default " alt="" title="$item.name" src="$item.thumb"  height="68" width="68">{{endif}}
@@ -22,7 +22,7 @@
                     </div><!-- .entry-meta -->
 			
                     <div class="comments-link">
-                        <a title="Comment" href="$item.plink.href">$item.total_comments_num</a>
+                        <a title="Comment" href="$item.displaylink">$item.total_comments_num</a>
                     </div>
             </header><!-- .entry-header -->
 
@@ -59,7 +59,7 @@
                     <span class="sep"> | </span>
                     {{ endif  }}
                     
-                    <span class="comments-link"><a title="Comment" href="$item.plink.href">$item.total_comments_num $item.total_comments_text</a>
+                    <span class="comments-link"><a title="Comment" href="$item.displaylink">$item.total_comments_num $item.total_comments_text</a>
                     </span>
         </footer><!-- #entry-meta -->
 

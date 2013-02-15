@@ -476,8 +476,9 @@ ul.tabs li a.active { background-color: #1982D1; color: #ffffff; }
 .compact .commentlist .avatar { left: -44px; width: 34px; height: 34px; }
 .compact .commentlist > li::before { display: none; }
 /* item author icon */
-.hentry .avatar { position: absolute; left: -73px; top: 20px; border-radius: 3px; box-shadow: 0px 1px 2px #CCCCCC; }
-
+.hentry .avatar { position: absolute; left: -60px; top: 20px; border-radius: 3px; box-shadow: 0px 1px 2px #CCCCCC; width: 48px; height: 48px;}
+.singular .entry-meta { position: relative; }
+.singular .hentry .avatar { left: 40px; top: 85px;}
 
 /* search item */
 article.search {
