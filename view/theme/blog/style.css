@@ -357,7 +357,7 @@ h2.fn { font-weight: bold; font-size: 1.2em;}
 
 
 /* tabs */
-ul.tabs { display: block; list-style: none; margin: 0px; height: auto; overflow: auto;}
+ul.tabs { display: block; list-style: none; margin: 0px 100px 0px 0px; height: auto; overflow: auto;}
 ul.tabs li { display: block; float: left; padding-right: 0.2em; }
 ul.tabs li a { display: block; text-align: center; text-decoration: none; padding: 0px 0.5em; }
 ul.tabs li a:hover { background-color: #EEEEEE; }
@@ -451,7 +451,6 @@ ul.tabs li a.active { background-color: #1982D1; color: #ffffff; }
 .reply li.comment { position: relative; margin-left: 40px; background-color:rgba(0, 0, 0, 0.03); padding-left: 20px;}
 .reply .avatar { left: -40px; width: 32px; height: 32px; background-color: #fff;}
 
-
 /* comment form */
 .respond { height: auto; overflow: auto; }
 .respond .form-submit { margin-top: 20px; }
@@ -467,6 +466,19 @@ ul.tabs li a.active { background-color: #1982D1; color: #ffffff; }
 	clear: both;
 	margin-top: 40px;
 }
+/* compact in network view */
+.hentry.compact { margin-bottom: 0px;}
+#comments.compact { border-bottom: 1px solid #aaaaaa; padding: 0px; background-color: #DDDDDD;}
+#comments.compact > .reply-link { padding: 10px; }
+.compact .respond { display: none; }
+.compact .commentlist { width: 100%; }
+.compact .commentlist > li.comment { border: none; border-radius: 0px; margin: 0px; padding: 10px; border-top: 1px solid #aaaaaa; }
+.compact .commentlist .avatar { left: -44px; width: 34px; height: 34px; }
+.compact .commentlist > li::before { display: none; }
+/* item author icon */
+.hentry .avatar { position: absolute; left: -73px; top: 20px; border-radius: 3px; box-shadow: 0px 1px 2px #CCCCCC; }
+
+
 /* search item */
 article.search {
 	background: #F6F6F6;
@@ -504,6 +516,44 @@ article.search .avatar {
 #search-box input[type="submit"]{ margin: 1em 2em 2em 0px; }
 #content > h2 { margin-bottom: 2em; } /* evabbe', poi tolgo l'html da 'sto schifo di php */
 
+/* lock panel */
+#panel { 
+	position: absolute;
+	background: #F9F9F9;
+	border: 1px solid #DDDDDD;
+	color: #444444;
+	display: block;
+	font-weight: 400;
+	height: auto;
+	line-height: 1em;
+	padding: 10px;
+	text-decoration: none;
+	z-index: 99999;
+}
+
+/* selected tools panel */
+#selection-tools {
+	position: absolute;
+	background: #F9F9F9;
+	border: 1px solid #DDDDDD;
+	color: #444444;
+	display: block;
+	font-weight: 400;
+	height: auto;
+	line-height: 1em;
+	padding: 10px;
+	text-decoration: none;
+	z-index: 99999;
+	transition: top 1s;
+	-moz-transition: top 1s; /* Firefox 4 */
+	-webkit-transition: top 1s; /* Safari and Chrome */
+	-o-transition: top 1s; /* Opera */
+	top: 0px;
+}
+
+/* item tools */
+.right-tools {float: right;}
+
 /* profile menu */
 ul#profiles-menu { top: 2em; left: 9px; width: 176px; }
 ul#profiles-menu li img { width: 16px; vertical-align: middle; margin-right: 10px;}
@@ -528,17 +578,30 @@ ul#profiles-menu li img { width: 16px; vertical-align: middle; margin-right: 10p
 .contact.dropmenu .menu-popup { left: 120px; top: 0px;}
 
 /* icons */
+.like-rotator { position: absolute; left: -20px;}
+
 .icon { display: inline-block; margin: 0px; padding: 0px; width: 16px; height: 16px; }
 .icon.camera	{ background: url(icons/image.png) transparent center center no-repeat; }
-.icon.attach 	{ background: url(icons/attachment.png) transparent center center no-repeat; }
-.icon.link	{ background: url(icons/link.png) transparent center center no-repeat; }
-.icon.video	{ background: url(icons/youtube2.png) transparent center center no-repeat; }
-.icon.audio	{ background: url(icons/headphones.png) transparent center center no-repeat; }
-.icon.globe	{ background: url(icons/location.png) transparent center center no-repeat; }
+.icon.attach	{ background: url(icons/attachment.png) transparent center center no-repeat; }
+.icon.link		{ background: url(icons/link.png) transparent center center no-repeat; }
+.icon.video		{ background: url(icons/youtube2.png) transparent center center no-repeat; }
+.icon.audio		{ background: url(icons/headphones.png) transparent center center no-repeat; }
+.icon.globe		{ background: url(icons/location.png) transparent center center no-repeat; }
 .icon.noglobe	{ background: url(icons/globe.png) transparent center center no-repeat; }
-.icon.lock	{ background: url(icons/lock2.png) transparent center center no-repeat; }
+.icon.lock		{ background: url(icons/lock2.png) transparent center center no-repeat; }
 .icon.unlock	{ background: url(icons/unlocked.png) transparent center center no-repeat; }
-.icon.edit	{ background: url(icons/pencil.png) transparent center center no-repeat; }
+.icon.edit		{ background: url(icons/pencil.png) transparent center center no-repeat; }
+
+.icon.like 		{ background: url(icons/thumbs-up.png) transparent center center no-repeat; }
+.icon.dislike	{ background: url(icons/thumbs-up2.png) transparent center center no-repeat; }
+.icon.recycle	{ background: url(icons/share.png) transparent center center no-repeat; }
+.icon.starred	{ background: url(icons/star3.png) transparent center center no-repeat; }
+.icon.unstarred	{ background: url(icons/star.png) transparent center center no-repeat; }
+.icon.file		{ background: url(icons/folder-open.png) transparent center center no-repeat; }
+.icon.tag		{ background: url(icons/tag.png) transparent center center no-repeat; }
+.icon.drophide	{ background: url(icons/remove.png) transparent center center no-repeat; }
+
+.icon.sep		{ display:inline-block; text-align: center; font-size: 26px; line-height: 16px;}
 
 .icon.on { border: 1px solid #cccccc; background-color: #56ef46;
 	-webkit-border-radius: 16px 16px 16px 16px;

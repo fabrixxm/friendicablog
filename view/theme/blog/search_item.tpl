@@ -23,5 +23,12 @@
         <div class="search-content">
           <p>$item.body</p>
         </div>
+
+		<footer class="entry-meta">
+			{{ if $item.conv }}
+					<a href='$item.conv.href'title='$item.conv.title'>$item.conv.title</a>
+			{{ endif }}
+        </footer><!-- #entry-meta -->
+		
       </article>
 

@@ -4,15 +4,16 @@ $live_update
     {{ inc $thread.template with $item=$thread }}{{ endinc }}
 {{ endfor }}
 
-<div id="conversation-end"></div>
 
 {{ if $dropping }}
-<div id="item-delete-selected" class="fakelink" onclick="deleteCheckedItems();">
-  <div id="item-delete-selected-icon" class="icon drophide" title="$dropping" onmouseover="imgbright(this);" onmouseout="imgdull(this);" ></div>
-  <div id="item-delete-selected-desc" >$dropping</div>
+<div id="selection-tools" style="display:none;" >
+  <a href="#" onclick="return deleteCheckedItems();"><span class="icon drophide" title="$dropping"></span></a>
+
+ <div class="selection-tools-footer">
+	<img id="item-delete-selected-rotator" src="images/rotator.gif" style="display: none;" />
+ </div>
+
 </div>
-<img id="item-delete-selected-rotator" class="like-rotator" src="images/rotator.gif" style="display: none;" />
-<div id="item-delete-selected-end"></div>
 {{ endif }}
 
 <script>
@@ -24,11 +25,11 @@ $live_update
     $(document).ready(function(){
         // setup reply popup forms
         $(".reply-link").colorbox({
-		href: function() {
-			return $(this).attr('href');
-		},
-		inline: true
-	});
+			href: function() {
+				return $(this).attr('href');
+			},
+			inline: true
+		});
     });
 </script>
 

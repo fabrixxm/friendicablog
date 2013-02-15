@@ -62,6 +62,7 @@
             </div>                        
         </footer>
     </div>
+	<?php if(x($page,'end')) echo $page['end']; ?>
 </body>
 </html>
 
