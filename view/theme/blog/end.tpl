@@ -1,1 +1,0 @@
-<script type="text/javascript" src="$baseurl/view/theme/blog/js/theme.js"></script>

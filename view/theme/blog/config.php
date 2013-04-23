@@ -49,7 +49,7 @@ function blogtheme_form(&$a, $headimg, $headimghome){
         ".wheel.jpg" => "wheel.jpg",
     );
 
-	
+	/*
 	// get_markup_template() load templates from current enabled theme
 	// if this theme is not the current one, it will fail
 	$template = dirname(__file__)."/smarty3/config.tpl";
@@ -58,7 +58,10 @@ function blogtheme_form(&$a, $headimg, $headimghome){
 		$t->filename = $template;
 	} else {
 		$t = get_markup_template( $template );	
-	}
+	}*/
+	
+	// load template from theme folder
+	$t = get_markup_template('config.tpl', 'view/theme/blog');
 	
 	$o .= replace_macros($t, array(
 		'$submit' => t('Submit'),
